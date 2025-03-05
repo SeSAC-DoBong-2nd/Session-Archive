@@ -1,8 +1,8 @@
 //
-//  MainViewController.swift
-//  SeSAC6Database
+//  FolderDetailViewController.swift
+//  SeSAC_Database
 //
-//  Created by Jack on 3/4/25.
+//  Created by 박신영 on 3/5/25.
 //
 
 import UIKit
@@ -10,36 +10,23 @@ import UIKit
 import RealmSwift
 import SnapKit
 
-//TMI: Mainvc와 같이 이름 짓지 말자
-//TMI: ...Manager, Service, Helper 키워드의 구분 찾아보기
-
-class MainViewController: UIViewController {
+class FolderDetailViewController: UIViewController {
 
     let tableView = UITableView()
     
-    //Results 타입을 활용했기에, 데이터가 바뀐 걸 새로 대입해주지 않아도 realm이 알아서 반영해줌.
-    var list: Results<JackTable>!
-    
-    //Realm의 동기화가 되려 성가시다면 아래와 같이 기존 배열 데이터관리하는 것처럼 다뤄도 좋다.
-//    var list: [JackTable]!
+    var list: List<JackTable>!
+    var id: ObjectId?
     
     let repository: JackRepository = JackTableRepository()
-    let folderRepository: FolderRepository = FolderTableRepository()
      
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        folderRepository.createItem(name: "개인")
-        folderRepository.createItem(name: "동아리")
-        folderRepository.createItem(name: "회사")
-        folderRepository.createItem(name: "멘토")
         print(#function)
         repository.getFileURL()
         configureHierarchy()
         configureView()
         configureConstraints()
-        
-        list = repository.fetchAll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,12 +61,13 @@ class MainViewController: UIViewController {
      
     @objc func rightBarButtonItemClicked() {
         let vc = AddViewController()
+        vc.id = self.id
         navigationController?.pushViewController(vc, animated: true)
     }
 
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension FolderDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -92,8 +80,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let data = list[indexPath.row]
         
 //        cell.testUI(model: data)
-        cell.titleLabel.text = "\(data.productName), \(data.category)"
-        cell.subTitleLabel.text = data.folder.first?.name
+        cell.titleLabel.text = data.productName
+        cell.subTitleLabel.text = data.category
         cell.overviewLabel.text = data.money.formatted() + "원"
         
         return cell
@@ -110,3 +98,4 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
       
     
 }
+

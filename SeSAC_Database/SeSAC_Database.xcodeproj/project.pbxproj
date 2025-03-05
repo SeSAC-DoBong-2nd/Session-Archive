@@ -20,6 +20,11 @@
 		9E7FC0FA2D768DCB00CEF423 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7FC0F92D768DCB00CEF423 /* RealmSwift */; };
 		9E7FC0FB2D768EB700CEF423 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9E7FC0F92D768DCB00CEF423 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9E7FC0FF2D7694DC00CEF423 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC0FE2D7694DC00CEF423 /* RealmModel.swift */; };
+		9E7FC1452D77D71500CEF423 /* JackTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC1442D77D71500CEF423 /* JackTableRepository.swift */; };
+		9E7FC1472D77E56000CEF423 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC1462D77E56000CEF423 /* Folder.swift */; };
+		9E7FC1492D77E84200CEF423 /* FolderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC1482D77E84200CEF423 /* FolderRepository.swift */; };
+		9E7FC14B2D77EF2F00CEF423 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC14A2D77EF2F00CEF423 /* FolderViewController.swift */; };
+		9E7FC14D2D77F81100CEF423 /* FolderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC14C2D77F81100CEF423 /* FolderDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +54,11 @@
 		9E7FC0D72D768CC900CEF423 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9E7FC0D82D768CC900CEF423 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		9E7FC0FE2D7694DC00CEF423 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		9E7FC1442D77D71500CEF423 /* JackTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackTableRepository.swift; sourceTree = "<group>"; };
+		9E7FC1462D77E56000CEF423 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		9E7FC1482D77E84200CEF423 /* FolderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRepository.swift; sourceTree = "<group>"; };
+		9E7FC14A2D77EF2F00CEF423 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		9E7FC14C2D77F81100CEF423 /* FolderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +93,7 @@
 		9E7FC0CC2D768CB500CEF423 /* SeSAC_Database */ = {
 			isa = PBXGroup;
 			children = (
-				9E7FC0FD2D7694CE00CEF423 /* Model */,
+				9E7FC0FD2D7694CE00CEF423 /* Realm */,
 				9E7FC0D42D768CB900CEF423 /* Database */,
 				9E7FC0C32D768CB500CEF423 /* AppDelegate.swift */,
 				9E7FC0C42D768CB500CEF423 /* Assets.xcassets */,
@@ -102,16 +112,21 @@
 				9E7FC0D62D768CC900CEF423 /* ListTableViewCell.swift */,
 				9E7FC0D72D768CC900CEF423 /* MainViewController.swift */,
 				9E7FC0D82D768CC900CEF423 /* Reusable.swift */,
+				9E7FC14A2D77EF2F00CEF423 /* FolderViewController.swift */,
+				9E7FC14C2D77F81100CEF423 /* FolderDetailViewController.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
 		};
-		9E7FC0FD2D7694CE00CEF423 /* Model */ = {
+		9E7FC0FD2D7694CE00CEF423 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				9E7FC1442D77D71500CEF423 /* JackTableRepository.swift */,
 				9E7FC0FE2D7694DC00CEF423 /* RealmModel.swift */,
+				9E7FC1462D77E56000CEF423 /* Folder.swift */,
+				9E7FC1482D77E84200CEF423 /* FolderRepository.swift */,
 			);
-			path = Model;
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +210,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7FC0D12D768CB500CEF423 /* AppDelegate.swift in Sources */,
+				9E7FC1472D77E56000CEF423 /* Folder.swift in Sources */,
 				9E7FC0D22D768CB500CEF423 /* SceneDelegate.swift in Sources */,
 				9E7FC0D92D768CC900CEF423 /* Reusable.swift in Sources */,
 				9E7FC0DA2D768CC900CEF423 /* ListTableViewCell.swift in Sources */,
 				9E7FC0DB2D768CC900CEF423 /* AddViewController.swift in Sources */,
+				9E7FC1452D77D71500CEF423 /* JackTableRepository.swift in Sources */,
+				9E7FC14D2D77F81100CEF423 /* FolderDetailViewController.swift in Sources */,
 				9E7FC0FF2D7694DC00CEF423 /* RealmModel.swift in Sources */,
+				9E7FC14B2D77EF2F00CEF423 /* FolderViewController.swift in Sources */,
+				9E7FC1492D77E84200CEF423 /* FolderRepository.swift in Sources */,
 				9E7FC0DC2D768CC900CEF423 /* MainViewController.swift in Sources */,
 				9E7FC0D32D768CB500CEF423 /* ViewController.swift in Sources */,
 			);

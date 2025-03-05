@@ -21,8 +21,9 @@ class AddViewController: UIViewController {
     let titleTextField = UITextField()
     let contentTextField = UITextField()
     
-    //realm에 접근
-    let realm = try! Realm()
+    var id: ObjectId! //Folder Record Primary Key
+    let repository: JackRepository = JackTableRepository()
+    let folderRepository: FolderRepository = FolderTableRepository()
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,27 +51,13 @@ class AddViewController: UIViewController {
     @objc func saveButtonClicked() {
         print(#function)
         
-        //Create
-        do {
-            try realm.write {
-                let data = JackTable(
-                    money: Int.random(in: 1000...100000),
-                    category: "생활비",
-                    productName: "린스",
-                    isRevenue: false,
-                    memo: nil,
-                    registerDate: Date()
-                )
-                
-                realm.add(data)
-                print("realm 저장 성공한 경우")
-            }
-        } catch {
-            print("realm 저장이 실패한 경우")
-        }
+//        repository.createItem()
+        let folder = folderRepository.fetchAll().where {
+            $0.id == self.id
+        }.first!
         
+        repository.createItemInFolder(folder: folder)
         navigationController?.popViewController(animated: true)
-        
     }
     
     private func configureView() {
