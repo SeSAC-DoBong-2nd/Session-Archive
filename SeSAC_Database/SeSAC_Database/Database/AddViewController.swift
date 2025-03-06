@@ -51,7 +51,7 @@ class AddViewController: UIViewController {
     @objc func saveButtonClicked() {
         print(#function)
         
-//        repository.createItem()
+        repository.createItem()
         let folder = folderRepository.fetchAll().where {
             $0.id == self.id
         }.first!

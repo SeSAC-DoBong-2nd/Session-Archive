@@ -29,10 +29,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        folderRepository.createItem(name: "개인")
-        folderRepository.createItem(name: "동아리")
-        folderRepository.createItem(name: "회사")
-        folderRepository.createItem(name: "멘토")
+//        folderRepository.createItem(name: "개인")
+//        folderRepository.createItem(name: "동아리")
+//        folderRepository.createItem(name: "회사")
+//        folderRepository.createItem(name: "멘토")
         print(#function)
         repository.getFileURL()
         configureHierarchy()

@@ -24,7 +24,7 @@ class FolderViewController: UIViewController {
         configureView()
         configureConstraints()
         list = repository.fetchAll()
-        dump(list)
+//        dump(list)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,14 +82,27 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //EmbeddedObject
         let data = list[indexPath.row]
-        let vc = FolderDetailViewController()
-        vc.list = data.detail
-        vc.id = data.id
+        repository.createMemo(data: data)
+        tableView.reloadData()
         
-        navigationController?.pushViewController(vc, animated: true)
         
-        self.tableView.reloadData()
+        //폴더 삭제
+        //폴더 삭제 시 세부 항목도 지울 것인지? (세부항목을 지우면 부모에도 반영이 되지만 그 역은 자동으로 반영되지않음.)
+            //그렇기에 세부 항목을 먼저 지우고, 이를 담고있는 폴더도 지워야함
+        //폴더 삭제 시 세부 항목을 다른 폴더로 이동해줄 것인지?
+//        let data = list[indexPath.row]
+//        repository.deleteItem(data: data)
+//        self.tableView.reloadData()
+        
+        //화면 전환
+//        let data = list[indexPath.row]
+//        let vc = FolderDetailViewController()
+//        vc.list = data.detail
+//        vc.id = data.id
+//        
+//        navigationController?.pushViewController(vc, animated: true)
     }
       
     
