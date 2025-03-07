@@ -83,9 +83,9 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //EmbeddedObject
-        let data = list[indexPath.row]
-        repository.createMemo(data: data)
-        tableView.reloadData()
+//        let data = list[indexPath.row]
+//        repository.createMemo(data: data)
+//        tableView.reloadData()
         
         
         //폴더 삭제
@@ -97,12 +97,12 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
 //        self.tableView.reloadData()
         
         //화면 전환
-//        let data = list[indexPath.row]
-//        let vc = FolderDetailViewController()
-//        vc.list = data.detail
-//        vc.id = data.id
-//        
-//        navigationController?.pushViewController(vc, animated: true)
+        let data = list[indexPath.row]
+        let vc = FolderDetailViewController()
+        vc.list = data.detail
+        vc.id = data.id
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
       
     

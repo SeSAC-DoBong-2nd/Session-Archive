@@ -15,7 +15,7 @@ protocol JackRepository {
     func createItem()
     func deleteItem(data: JackTable)
     func updateItem(data: JackTable)
-    func createItemInFolder(folder: Folder)
+    func createItemInFolder(folder: Folder, data: JackTable)
 }
 
 // Realm CRUD
@@ -55,7 +55,7 @@ final class JackTableRepository: JackRepository {
         }
     }
     
-    func createItemInFolder(folder: Folder) { //Folder 테이블과 상관없이 JackTable에 레코드 바로 추가
+    func createItemInFolder(folder: Folder, data: JackTable) { //Folder 테이블과 상관없이 JackTable에 레코드 바로 추가
         //Create
         do {
             try realm.write {
@@ -66,13 +66,6 @@ final class JackTableRepository: JackRepository {
 //                    $0.name == "개인"
 //                }.first!
                 
-                let data = JackTable(
-                    money: Int.random(in: 1000...100000),
-                    category: ["생활비", "카페", "식비"].randomElement()!,
-                    productName: ["린스", "커피", "과자", "칼국수"].randomElement()!,
-                    isRevenue: false,
-                    memo: nil
-                )
                 
                 //realm에 직접적으로 add하는게 아닌, 또 다른 List 타입 레코드 속에 추가
                 folder.detail.append(data)

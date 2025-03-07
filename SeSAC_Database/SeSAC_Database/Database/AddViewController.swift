@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 import RealmSwift
 import SnapKit
@@ -45,18 +46,39 @@ class AddViewController: UIViewController {
     
     @objc func addButtonClicked() {
         print(#function)
+        var configuration = PHPickerConfiguration()
+        configuration.selectionLimit = 3
+        configuration.filter = .any(of: [.videos, .images])
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        present(picker, animated: true)
     }
  
     
     @objc func saveButtonClicked() {
         print(#function)
         
-        repository.createItem()
+//        repository.createItem()
+        
         let folder = folderRepository.fetchAll().where {
             $0.id == self.id
         }.first!
         
-        repository.createItemInFolder(folder: folder)
+        let data = JackTable(
+            money: Int.random(in: 1000...100000),
+            category: ["생활비", "카페", "식비"].randomElement()!,
+            productName: ["린스", "커피", "과자", "칼국수"].randomElement()!,
+            isRevenue: false,
+            memo: nil
+        )
+        
+        repository.createItemInFolder(folder: folder, data: data)
+        
+        //이미지가 필수라면 repository도 같이 저장
+        if let image = photoImageView.image {
+//            repository.createItemInFolder(folder: folder)
+            saveImageToDocument(image: image, fileName: "\(data.id)")
+        }
         navigationController?.popViewController(animated: true)
     }
     
@@ -132,4 +154,27 @@ class AddViewController: UIViewController {
     }
     
 
+}
+
+extension AddViewController: PHPickerViewControllerDelegate {
+    
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        picker.dismiss(animated: true)
+        
+        let itemProvider = results.first?.itemProvider
+        
+        if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
+            
+            itemProvider.loadObject(ofClass: UIImage.self) { image, error in
+                
+                DispatchQueue.main.async {
+                    self.photoImageView.image = image as? UIImage
+                }
+                
+            }
+            
+        }
+    }
+    
 }

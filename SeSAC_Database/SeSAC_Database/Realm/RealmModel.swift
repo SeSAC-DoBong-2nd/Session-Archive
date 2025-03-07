@@ -20,7 +20,9 @@ final class JackTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId //PK
     @Persisted var money: Int //금액
     @Persisted var category: String //카테고리명
-    @Persisted(indexed: true) var productName: String //상품명
+    
+    @Persisted(indexed: true)var productName: String //상품명
+    
     @Persisted var isRevenue: Bool //수입지출여부
     @Persisted var regdate: Date //등록일
     @Persisted var memo: String? //메모

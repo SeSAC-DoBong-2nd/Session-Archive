@@ -83,15 +83,19 @@ extension FolderDetailViewController: UITableViewDelegate, UITableViewDataSource
         cell.titleLabel.text = data.productName
         cell.subTitleLabel.text = data.category
         cell.overviewLabel.text = data.money.formatted() + "원"
-        
+        cell.thumbnailImageView.image = loadImageToDocument(fileName: "\(data.id)")
+        cell.thumbnailImageView.clipsToBounds = true
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = list[indexPath.row]
         
+        removeImageFromDocument(filename: "\(data.id)")
         //realm의 코드는 동기로 동작한다.
         repository.deleteItem(data: data)
+//        removeImageFromDocument(filename: "\(data.id)")
+            //여기서 제거를 하게되면, realm과 동기화 되고있던 list의 값을 불러온 data 자체가 날아갔기에, data.id가 이미 삭제되고 난 이후라, 삭제되고 없어 에러 발생
         
         self.tableView.reloadData()
     }

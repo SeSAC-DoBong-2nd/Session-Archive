@@ -1,6 +1,15 @@
 {
-  "originHash" : "d5faa50f001ab73f737fb43bcf0bd16184b6c47caed86b9c93a48144dfdd0b42",
+  "originHash" : "a9b8d5618e3de93eb04681cb6d3c253409cdb1f37cd16289a70284abf5cfe17b",
   "pins" : [
+    {
+      "identity" : "fscalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSCalendar",
+      "state" : {
+        "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
+        "version" : "2.8.4"
+      }
+    },
     {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
