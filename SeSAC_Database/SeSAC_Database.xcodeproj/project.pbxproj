@@ -27,6 +27,8 @@
 		9E7FC14D2D77F81100CEF423 /* FolderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC14C2D77F81100CEF423 /* FolderDetailViewController.swift */; };
 		9E7FC1EA2D7A732300CEF423 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7FC1E92D7A732300CEF423 /* FSCalendar */; };
 		9E7FC1EC2D7A863A00CEF423 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC1EB2D7A863A00CEF423 /* UIViewController+Extension.swift */; };
+		9E9E1C8A2D7E6DEF000EC8DB /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9E1C892D7E6DEF000EC8DB /* Zip */; };
+		9E9E1C8C2D7E6ED5000EC8DB /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E1C8B2D7E6ED5000EC8DB /* BackupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +64,7 @@
 		9E7FC14A2D77EF2F00CEF423 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 		9E7FC14C2D77F81100CEF423 /* FolderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailViewController.swift; sourceTree = "<group>"; };
 		9E7FC1EB2D7A863A00CEF423 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9E9E1C8B2D7E6ED5000EC8DB /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 			files = (
 				9E7FC0FA2D768DCB00CEF423 /* RealmSwift in Frameworks */,
 				9E7FC1EA2D7A732300CEF423 /* FSCalendar in Frameworks */,
+				9E9E1C8A2D7E6DEF000EC8DB /* Zip in Frameworks */,
 				9E7FC0F72D768D0C00CEF423 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 				9E7FC0C42D768CB500CEF423 /* Assets.xcassets */,
 				9E7FC0C52D768CB500CEF423 /* Info.plist */,
 				9E7FC0C72D768CB500CEF423 /* LaunchScreen.storyboard */,
+				9E9E1C8B2D7E6ED5000EC8DB /* BackupViewController.swift */,
 				9E7FC0CA2D768CB500CEF423 /* SceneDelegate.swift */,
 				9E7FC0CB2D768CB500CEF423 /* ViewController.swift */,
 				9E7FC1EB2D7A863A00CEF423 /* UIViewController+Extension.swift */,
@@ -155,6 +160,7 @@
 				9E7FC0F62D768D0C00CEF423 /* SnapKit */,
 				9E7FC0F92D768DCB00CEF423 /* RealmSwift */,
 				9E7FC1E92D7A732300CEF423 /* FSCalendar */,
+				9E9E1C892D7E6DEF000EC8DB /* Zip */,
 			);
 			productName = SeSAC_Database;
 			productReference = 9E7FC0AB2D768CA100CEF423 /* SeSAC_Database.app */;
@@ -188,6 +194,7 @@
 				9E7FC0F52D768D0C00CEF423 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9E7FC0F82D768DCB00CEF423 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				9E7FC1E82D7A732300CEF423 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				9E9E1C882D7E6DEF000EC8DB /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9E7FC0AC2D768CA100CEF423 /* Products */;
@@ -227,6 +234,7 @@
 				9E7FC14D2D77F81100CEF423 /* FolderDetailViewController.swift in Sources */,
 				9E7FC0FF2D7694DC00CEF423 /* RealmModel.swift in Sources */,
 				9E7FC14B2D77EF2F00CEF423 /* FolderViewController.swift in Sources */,
+				9E9E1C8C2D7E6ED5000EC8DB /* BackupViewController.swift in Sources */,
 				9E7FC1492D77E84200CEF423 /* FolderRepository.swift in Sources */,
 				9E7FC0DC2D768CC900CEF423 /* MainViewController.swift in Sources */,
 				9E7FC0D32D768CB500CEF423 /* ViewController.swift in Sources */,
@@ -476,6 +484,14 @@
 				minimumVersion = 2.8.4;
 			};
 		};
+		9E9E1C882D7E6DEF000EC8DB /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -493,6 +509,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9E7FC1E82D7A732300CEF423 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		9E9E1C892D7E6DEF000EC8DB /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E9E1C882D7E6DEF000EC8DB /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -48,6 +48,10 @@ class FolderViewController: UIViewController {
         let image = UIImage(systemName: "star")
         let item = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(rightBarButtonItemClicked))
         navigationItem.rightBarButtonItem = item
+        
+        let leftImage = UIImage(systemName: "pencil")
+        let leftItem = UIBarButtonItem(image: leftImage, style: .plain, target: self, action: #selector(leftBarButtonItemClicked))
+        navigationItem.leftBarButtonItem = leftItem
     }
     
     private func configureConstraints() {
@@ -55,6 +59,11 @@ class FolderViewController: UIViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    @objc func leftBarButtonItemClicked() {
+        let vc = BackupViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
      
     @objc func rightBarButtonItemClicked() {
