@@ -1,0 +1,75 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "brg-0G-hR3.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"환영합니다\"; ObjectID = \"brg-0G-hR3\";",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ようこそ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "환영합니다"
+          }
+        }
+      }
+    },
+    "gvb-XE-QYa.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"런치스크린\"; ObjectID = \"gvb-XE-QYa\";",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LaunchScreen"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起動画面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "런치스크린"
+          }
+        }
+      }
+    },
+    "YEe-UI-ML2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다국어 이후"
+          }
+        }
+      }
+    },
+    "YEe-UI-ML2.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"다국어 세팅 후\"; ObjectID = \"YEe-UI-ML2\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "다국어 세팅 후"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

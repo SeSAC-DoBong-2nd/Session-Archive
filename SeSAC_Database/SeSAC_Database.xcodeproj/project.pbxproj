@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2430F62D8125A600121B58 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2430F52D8125A600121B58 /* String+.swift */; };
+		9E2430FD2D81346400121B58 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9E2430FC2D81346400121B58 /* InfoPlist.xcstrings */; };
+		9E2431002D81346400121B58 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9E2430FF2D81346400121B58 /* Localizable.xcstrings */; };
 		9E7FC0CD2D768CB500CEF423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E7FC0C42D768CB500CEF423 /* Assets.xcassets */; };
 		9E7FC0CF2D768CB500CEF423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7FC0C72D768CB500CEF423 /* LaunchScreen.storyboard */; };
 		9E7FC0D12D768CB500CEF423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7FC0C32D768CB500CEF423 /* AppDelegate.swift */; };
@@ -46,6 +49,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E2430F52D8125A600121B58 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		9E2430FC2D81346400121B58 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		9E2430FE2D81346400121B58 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
+		9E2430FF2D81346400121B58 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9E7FC0AB2D768CA100CEF423 /* SeSAC_Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Database.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7FC0C32D768CB500CEF423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E7FC0C42D768CB500CEF423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +118,9 @@
 				9E7FC0CA2D768CB500CEF423 /* SceneDelegate.swift */,
 				9E7FC0CB2D768CB500CEF423 /* ViewController.swift */,
 				9E7FC1EB2D7A863A00CEF423 /* UIViewController+Extension.swift */,
+				9E2430FF2D81346400121B58 /* Localizable.xcstrings */,
+				9E2430F52D8125A600121B58 /* String+.swift */,
+				9E2430FC2D81346400121B58 /* InfoPlist.xcstrings */,
 			);
 			path = SeSAC_Database;
 			sourceTree = "<group>";
@@ -187,6 +197,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ja,
 			);
 			mainGroup = 9E7FC0A22D768CA100CEF423;
 			minimizedProjectReferenceProxies = 1;
@@ -212,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7FC0CD2D768CB500CEF423 /* Assets.xcassets in Resources */,
+				9E2430FD2D81346400121B58 /* InfoPlist.xcstrings in Resources */,
+				9E2431002D81346400121B58 /* Localizable.xcstrings in Resources */,
 				9E7FC0CF2D768CB500CEF423 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +247,7 @@
 				9E7FC1452D77D71500CEF423 /* JackTableRepository.swift in Sources */,
 				9E7FC14D2D77F81100CEF423 /* FolderDetailViewController.swift in Sources */,
 				9E7FC0FF2D7694DC00CEF423 /* RealmModel.swift in Sources */,
+				9E2430F62D8125A600121B58 /* String+.swift in Sources */,
 				9E7FC14B2D77EF2F00CEF423 /* FolderViewController.swift in Sources */,
 				9E9E1C8C2D7E6ED5000EC8DB /* BackupViewController.swift in Sources */,
 				9E7FC1492D77E84200CEF423 /* FolderRepository.swift in Sources */,
@@ -248,6 +263,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E7FC0C62D768CB500CEF423 /* Base */,
+				9E2430FE2D81346400121B58 /* mul */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +338,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -376,6 +393,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -385,6 +403,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -432,6 +451,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

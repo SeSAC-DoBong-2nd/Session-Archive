@@ -24,7 +24,16 @@ class FolderViewController: UIViewController {
         configureView()
         configureConstraints()
         list = repository.fetchAll()
-//        dump(list)
+//        navigationItem.title = "navigation_title_folder".localized
+        
+//        String(format: <#T##String#>, arguments: <#T##[any CVarArg]#>)
+        
+//        let title = NSLocalizedString("navigation_title_nickname", comment: "") //제 닉네임은 %@, 성별은 %@, 나이는 %d 입니다.
+        //예시가 위처럼 3개의 변수를 받는다면, 순서대로 아래 고래밥 이후 성별, 나이를 적어주면 된다.
+        
+//        let titleFormat = String(format: title, "고래밥")
+        
+        navigationItem.title = "navigation_title_nickname".localized(with: "고래밥")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +95,7 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
         let data = list[indexPath.row]
         
         cell.titleLabel.text = data.name
-        cell.subTitleLabel.text = "\(data.detail.count)개"
+        cell.subTitleLabel.text = "cell_age".localized(number: 22)
         return cell
     }
     
