@@ -15,6 +15,7 @@
  dispose - store
  PublishSubject - PassThroughSubject
  BehaviorSubject - CurrentValueSubject
+ observeon - receive(on:)
  
  
  bind, drive, relay  => 에러 생각 X. next 이벤트만 방출. 왜?? => UI에 해당 -> RxCocoa
