@@ -41,15 +41,17 @@ final class WebSocketManager {
     
     func receiveMessage() {
         webSocket?.receive(completionHandler: { result in
-            print("psy",result)
+//            print("psy",result)
             
             switch result {
             case .success(let success):
                 switch success {
                 case .data(let value):
-                    print("Data Result: \(value)")
+//                    print("Data Result: \(value)")
+                    print("")
                 case .string(let value):
-                    print("String Result: \(value)")
+//                    print("String Result: \(value)")
+                    print("")
                 @unknown default:
                     print("")
                 }

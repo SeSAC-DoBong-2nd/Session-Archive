@@ -7,11 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E6F7C332D937F77009F24FC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7C322D937F77009F24FC /* SnapKit */; };
+		9E6F7E962D9CCC40009F24FC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E952D9CCC40009F24FC /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		9E6F7E982D9CCC40009F24FC /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E972D9CCC40009F24FC /* FirebaseCrashlytics */; };
+		9E6F7E9A2D9CCC40009F24FC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E992D9CCC40009F24FC /* FirebaseMessaging */; };
+		9E6F7E9D2D9CCC54009F24FC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E9C2D9CCC54009F24FC /* SnapKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E6F7EA82D9CE5AA009F24FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E4D69BD2D8A68BA001BB449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E4D69C42D8A68BA001BB449;
+			remoteInfo = SeSACLaunchProject;
+		};
+		9E6F7EB52D9CE5D5009F24FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E4D69BD2D8A68BA001BB449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E4D69C42D8A68BA001BB449;
+			remoteInfo = SeSACLaunchProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9E4D69C52D8A68BA001BB449 /* SeSACLaunchProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACLaunchProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6F7EA22D9CE5AA009F24FC /* SeSACLaunchProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACLaunchProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACLaunchProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -22,6 +44,13 @@
 			);
 			target = 9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */;
 		};
+		9E6F7EC22D9CE6F6009F24FC /* Exceptions for "SeSACLaunchProject" folder in "SeSACLaunchProjectTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TestExample/Jack.swift,
+			);
+			target = 9E6F7EB02D9CE5D5009F24FC /* SeSACLaunchProjectTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,8 +58,19 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				9E4D69D72D8A68BC001BB449 /* Exceptions for "SeSACLaunchProject" folder in "SeSACLaunchProject" target */,
+				9E6F7EC22D9CE6F6009F24FC /* Exceptions for "SeSACLaunchProject" folder in "SeSACLaunchProjectTests" target */,
 			);
 			path = SeSACLaunchProject;
+			sourceTree = "<group>";
+		};
+		9E6F7EA32D9CE5AA009F24FC /* SeSACLaunchProjectUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SeSACLaunchProjectUITests;
+			sourceTree = "<group>";
+		};
+		9E6F7EB22D9CE5D5009F24FC /* SeSACLaunchProjectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SeSACLaunchProjectTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +80,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6F7C332D937F77009F24FC /* SnapKit in Frameworks */,
+				9E6F7E9A2D9CCC40009F24FC /* FirebaseMessaging in Frameworks */,
+				9E6F7E9D2D9CCC54009F24FC /* SnapKit in Frameworks */,
+				9E6F7E962D9CCC40009F24FC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				9E6F7E982D9CCC40009F24FC /* FirebaseCrashlytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6F7E9F2D9CE5AA009F24FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6F7EAE2D9CE5D5009F24FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				9E4D69C72D8A68BA001BB449 /* SeSACLaunchProject */,
+				9E6F7EA32D9CE5AA009F24FC /* SeSACLaunchProjectUITests */,
+				9E6F7EB22D9CE5D5009F24FC /* SeSACLaunchProjectTests */,
 				9E4D69C62D8A68BA001BB449 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				9E4D69C52D8A68BA001BB449 /* SeSACLaunchProject.app */,
+				9E6F7EA22D9CE5AA009F24FC /* SeSACLaunchProjectUITests.xctest */,
+				9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,11 +144,60 @@
 			);
 			name = SeSACLaunchProject;
 			packageProductDependencies = (
-				9E6F7C322D937F77009F24FC /* SnapKit */,
+				9E6F7E952D9CCC40009F24FC /* FirebaseAnalyticsWithoutAdIdSupport */,
+				9E6F7E972D9CCC40009F24FC /* FirebaseCrashlytics */,
+				9E6F7E992D9CCC40009F24FC /* FirebaseMessaging */,
+				9E6F7E9C2D9CCC54009F24FC /* SnapKit */,
 			);
 			productName = SeSACLaunchProject;
 			productReference = 9E4D69C52D8A68BA001BB449 /* SeSACLaunchProject.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9E6F7EA12D9CE5AA009F24FC /* SeSACLaunchProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E6F7EAA2D9CE5AA009F24FC /* Build configuration list for PBXNativeTarget "SeSACLaunchProjectUITests" */;
+			buildPhases = (
+				9E6F7E9E2D9CE5AA009F24FC /* Sources */,
+				9E6F7E9F2D9CE5AA009F24FC /* Frameworks */,
+				9E6F7EA02D9CE5AA009F24FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E6F7EA92D9CE5AA009F24FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9E6F7EA32D9CE5AA009F24FC /* SeSACLaunchProjectUITests */,
+			);
+			name = SeSACLaunchProjectUITests;
+			packageProductDependencies = (
+			);
+			productName = SeSACLaunchProjectUITests;
+			productReference = 9E6F7EA22D9CE5AA009F24FC /* SeSACLaunchProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9E6F7EB02D9CE5D5009F24FC /* SeSACLaunchProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E6F7EB72D9CE5D5009F24FC /* Build configuration list for PBXNativeTarget "SeSACLaunchProjectTests" */;
+			buildPhases = (
+				9E6F7EAD2D9CE5D5009F24FC /* Sources */,
+				9E6F7EAE2D9CE5D5009F24FC /* Frameworks */,
+				9E6F7EAF2D9CE5D5009F24FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E6F7EB62D9CE5D5009F24FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9E6F7EB22D9CE5D5009F24FC /* SeSACLaunchProjectTests */,
+			);
+			name = SeSACLaunchProjectTests;
+			packageProductDependencies = (
+			);
+			productName = SeSACLaunchProjectTests;
+			productReference = 9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +212,14 @@
 					9E4D69C42D8A68BA001BB449 = {
 						CreatedOnToolsVersion = 16.1;
 					};
+					9E6F7EA12D9CE5AA009F24FC = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 9E4D69C42D8A68BA001BB449;
+					};
+					9E6F7EB02D9CE5D5009F24FC = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 9E4D69C42D8A68BA001BB449;
+					};
 				};
 			};
 			buildConfigurationList = 9E4D69C02D8A68BA001BB449 /* Build configuration list for PBXProject "SeSACLaunchProject" */;
@@ -114,7 +232,8 @@
 			mainGroup = 9E4D69BC2D8A68BA001BB449;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9E6F7C312D937F77009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9E6F7E942D9CCC40009F24FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9E6F7E9B2D9CCC54009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9E4D69C62D8A68BA001BB449 /* Products */;
@@ -122,12 +241,28 @@
 			projectRoot = "";
 			targets = (
 				9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */,
+				9E6F7EA12D9CE5AA009F24FC /* SeSACLaunchProjectUITests */,
+				9E6F7EB02D9CE5D5009F24FC /* SeSACLaunchProjectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9E4D69C32D8A68BA001BB449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6F7EA02D9CE5AA009F24FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6F7EAF2D9CE5D5009F24FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +279,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E6F7E9E2D9CE5AA009F24FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E6F7EAD2D9CE5D5009F24FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E6F7EA92D9CE5AA009F24FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */;
+			targetProxy = 9E6F7EA82D9CE5AA009F24FC /* PBXContainerItemProxy */;
+		};
+		9E6F7EB62D9CE5D5009F24FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */;
+			targetProxy = 9E6F7EB52D9CE5D5009F24FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9E4D69D92D8A68BC001BB449 /* Debug */ = {
@@ -324,6 +486,76 @@
 			};
 			name = Release;
 		};
+		9E6F7EAB2D9CE5AA009F24FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeSACLaunchProject;
+			};
+			name = Debug;
+		};
+		9E6F7EAC2D9CE5AA009F24FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeSACLaunchProject;
+			};
+			name = Release;
+		};
+		9E6F7EB82D9CE5D5009F24FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeSACLaunchProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeSACLaunchProject";
+			};
+			name = Debug;
+		};
+		9E6F7EB92D9CE5D5009F24FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeSACLaunchProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeSACLaunchProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,10 +577,36 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9E6F7EAA2D9CE5AA009F24FC /* Build configuration list for PBXNativeTarget "SeSACLaunchProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E6F7EAB2D9CE5AA009F24FC /* Debug */,
+				9E6F7EAC2D9CE5AA009F24FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E6F7EB72D9CE5D5009F24FC /* Build configuration list for PBXNativeTarget "SeSACLaunchProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E6F7EB82D9CE5D5009F24FC /* Debug */,
+				9E6F7EB92D9CE5D5009F24FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9E6F7C312D937F77009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		9E6F7E942D9CCC40009F24FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+		9E6F7E9B2D9CCC54009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -359,9 +617,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9E6F7C322D937F77009F24FC /* SnapKit */ = {
+		9E6F7E952D9CCC40009F24FC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9E6F7C312D937F77009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 9E6F7E942D9CCC40009F24FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		9E6F7E972D9CCC40009F24FC /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6F7E942D9CCC40009F24FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		9E6F7E992D9CCC40009F24FC /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6F7E942D9CCC40009F24FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		9E6F7E9C2D9CCC54009F24FC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6F7E9B2D9CCC54009F24FC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
