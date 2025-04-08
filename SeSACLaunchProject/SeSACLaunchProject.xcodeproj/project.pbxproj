@@ -11,6 +11,9 @@
 		9E6F7E982D9CCC40009F24FC /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E972D9CCC40009F24FC /* FirebaseCrashlytics */; };
 		9E6F7E9A2D9CCC40009F24FC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E992D9CCC40009F24FC /* FirebaseMessaging */; };
 		9E6F7E9D2D9CCC54009F24FC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6F7E9C2D9CCC54009F24FC /* SnapKit */; };
+		9E7F11A42DA3537D00693A4E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7F11A32DA3537D00693A4E /* WidgetKit.framework */; };
+		9E7F11A62DA3537D00693A4E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7F11A52DA3537D00693A4E /* SwiftUI.framework */; };
+		9E7F11B72DA3537F00693A4E /* JackWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9E7F11A12DA3537D00693A4E /* JackWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +31,36 @@
 			remoteGlobalIDString = 9E4D69C42D8A68BA001BB449;
 			remoteInfo = SeSACLaunchProject;
 		};
+		9E7F11B52DA3537F00693A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E4D69BD2D8A68BA001BB449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E7F11A02DA3537D00693A4E;
+			remoteInfo = JackWidgetExtensionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E7F11B82DA3537F00693A4E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9E7F11B72DA3537F00693A4E /* JackWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9E4D69C52D8A68BA001BB449 /* SeSACLaunchProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACLaunchProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6F7EA22D9CE5AA009F24FC /* SeSACLaunchProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACLaunchProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACLaunchProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7F11A12DA3537D00693A4E /* JackWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JackWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7F11A32DA3537D00693A4E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9E7F11A52DA3537D00693A4E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,8 +75,25 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				TestExample/Jack.swift,
+				TestExample/LoginViewController.swift,
+				TestExample/Validator.swift,
 			);
 			target = 9E6F7EB02D9CE5D5009F24FC /* SeSACLaunchProjectTests */;
+		};
+		9E7F11BC2DA3537F00693A4E /* Exceptions for "JackWidgetExtension" folder in "JackWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9E7F11A02DA3537D00693A4E /* JackWidgetExtensionExtension */;
+		};
+		9E7F11CA2DA35D9A00693A4E /* Exceptions for "SeSACLaunchProjectUITests" folder in "SeSACLaunchProject" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginValidationTest.swift,
+				UpgradeValidationTest.swift,
+			);
+			target = 9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -65,12 +109,23 @@
 		};
 		9E6F7EA32D9CE5AA009F24FC /* SeSACLaunchProjectUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9E7F11CA2DA35D9A00693A4E /* Exceptions for "SeSACLaunchProjectUITests" folder in "SeSACLaunchProject" target */,
+			);
 			path = SeSACLaunchProjectUITests;
 			sourceTree = "<group>";
 		};
 		9E6F7EB22D9CE5D5009F24FC /* SeSACLaunchProjectTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SeSACLaunchProjectTests;
+			sourceTree = "<group>";
+		};
+		9E7F11A72DA3537D00693A4E /* JackWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9E7F11BC2DA3537F00693A4E /* Exceptions for "JackWidgetExtension" folder in "JackWidgetExtensionExtension" target */,
+			);
+			path = JackWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -101,6 +156,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E7F119E2DA3537D00693A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7F11A62DA3537D00693A4E /* SwiftUI.framework in Frameworks */,
+				9E7F11A42DA3537D00693A4E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +174,8 @@
 				9E4D69C72D8A68BA001BB449 /* SeSACLaunchProject */,
 				9E6F7EA32D9CE5AA009F24FC /* SeSACLaunchProjectUITests */,
 				9E6F7EB22D9CE5D5009F24FC /* SeSACLaunchProjectTests */,
+				9E7F11A72DA3537D00693A4E /* JackWidgetExtension */,
+				9E7F11A22DA3537D00693A4E /* Frameworks */,
 				9E4D69C62D8A68BA001BB449 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,8 +186,18 @@
 				9E4D69C52D8A68BA001BB449 /* SeSACLaunchProject.app */,
 				9E6F7EA22D9CE5AA009F24FC /* SeSACLaunchProjectUITests.xctest */,
 				9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */,
+				9E7F11A12DA3537D00693A4E /* JackWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9E7F11A22DA3537D00693A4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E7F11A32DA3537D00693A4E /* WidgetKit.framework */,
+				9E7F11A52DA3537D00693A4E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,10 +210,12 @@
 				9E4D69C12D8A68BA001BB449 /* Sources */,
 				9E4D69C22D8A68BA001BB449 /* Frameworks */,
 				9E4D69C32D8A68BA001BB449 /* Resources */,
+				9E7F11B82DA3537F00693A4E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9E7F11B62DA3537F00693A4E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9E4D69C72D8A68BA001BB449 /* SeSACLaunchProject */,
@@ -199,6 +277,28 @@
 			productReference = 9E6F7EB12D9CE5D5009F24FC /* SeSACLaunchProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9E7F11A02DA3537D00693A4E /* JackWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E7F11BB2DA3537F00693A4E /* Build configuration list for PBXNativeTarget "JackWidgetExtensionExtension" */;
+			buildPhases = (
+				9E7F119D2DA3537D00693A4E /* Sources */,
+				9E7F119E2DA3537D00693A4E /* Frameworks */,
+				9E7F119F2DA3537D00693A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9E7F11A72DA3537D00693A4E /* JackWidgetExtension */,
+			);
+			name = JackWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = JackWidgetExtensionExtension;
+			productReference = 9E7F11A12DA3537D00693A4E /* JackWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +319,9 @@
 					9E6F7EB02D9CE5D5009F24FC = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 9E4D69C42D8A68BA001BB449;
+					};
+					9E7F11A02DA3537D00693A4E = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -243,6 +346,7 @@
 				9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */,
 				9E6F7EA12D9CE5AA009F24FC /* SeSACLaunchProjectUITests */,
 				9E6F7EB02D9CE5D5009F24FC /* SeSACLaunchProjectTests */,
+				9E7F11A02DA3537D00693A4E /* JackWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +367,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9E6F7EAF2D9CE5D5009F24FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E7F119F2DA3537D00693A4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,6 +404,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E7F119D2DA3537D00693A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -305,6 +423,11 @@
 			isa = PBXTargetDependency;
 			target = 9E4D69C42D8A68BA001BB449 /* SeSACLaunchProject */;
 			targetProxy = 9E6F7EB52D9CE5D5009F24FC /* PBXContainerItemProxy */;
+		};
+		9E7F11B62DA3537F00693A4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E7F11A02DA3537D00693A4E /* JackWidgetExtensionExtension */;
+			targetProxy = 9E7F11B52DA3537F00693A4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -556,6 +679,60 @@
 			};
 			name = Release;
 		};
+		9E7F11B92DA3537F00693A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JackWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JackWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProject2.JackWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E7F11BA2DA3537F00693A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A95XXD5WT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JackWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JackWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psy.SeSACLaunchProject2.JackWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,6 +768,15 @@
 			buildConfigurations = (
 				9E6F7EB82D9CE5D5009F24FC /* Debug */,
 				9E6F7EB92D9CE5D5009F24FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E7F11BB2DA3537F00693A4E /* Build configuration list for PBXNativeTarget "JackWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E7F11B92DA3537F00693A4E /* Debug */,
+				9E7F11BA2DA3537F00693A4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
