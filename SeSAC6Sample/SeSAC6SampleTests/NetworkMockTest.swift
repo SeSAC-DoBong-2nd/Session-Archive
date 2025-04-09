@@ -26,9 +26,9 @@ final class NetworkMockTest: XCTestCase {
     //-> 테스트의 일관성을 위해서 외부 환경에 영향을 안 받도록 mockdata
     //
     func testExample() throws {
-        sut.fetchLotto { <#Lotto#> in
-            <#code#>
-        }
+//        sut.fetchLotto { <#Lotto#> in
+//            <#code#>
+//        }
     }
 
     func testPerformanceExample() throws {
