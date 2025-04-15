@@ -16,7 +16,7 @@ private struct PointBorderText: ViewModifier {
         content
             .font(.title)
             .padding(10) //수치를 입력하지 않으면 iOS 버전 별로 다른 값이 적용됨
-            .asForeground(.red)
+            .asForeground(.white)
             .background(.purple)
             .clipShape(.capsule)
     }
