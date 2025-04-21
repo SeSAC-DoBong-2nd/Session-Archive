@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIMVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            AnimationView()
+            ContentView()
         }
     }
 }

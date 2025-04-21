@@ -6,13 +6,43 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     @State private var nickname = ""
+    //SwiftUI에서 사용되는 유저디폴츠 프로퍼티 레퍼 = AppStorage
+//    @AppStorage("jack") var savedNickname: String?
     
+    ///네비게이션 스택
+    ///상위뷰에 하위뷰가 종속적이지 않은 형태로 값 전달, 화면 전환
     var body: some View {
         VStack {
             TextField("닉네임을 입력해 보세요", text: $nickname)
+            
+            Button("저장") {
+                UserDefaults.standard.set(nickname, forKey: "Dobong")
+                
+                //AppGroup을 사용했다면 아래와 같이 사용해야한다!!
+                UserDefaults.groupShared.set(nickname, forKey: "Dobong")
+                //위젯이 보통 1시간 주기로 갱신되는데, 해당 코드를 사용하면 바로 갱신
+                /*
+                 1. 저장 버튼 클릭 시 위젯이 바로 렌더링 (시간과, emoji 숫자가 바뀌는게 보임)
+                 2. userdefaults jack이 widget에 적용되지 않음
+                 */
+                WidgetCenter.shared.reloadTimelines(ofKind: "BasicWidget")
+                
+                WidgetCenter.shared.getCurrentConfigurations { widget in
+                    switch widget {
+                    case .success(let success):
+                        print("success: ",success)
+                    case .failure(let failure):
+                        print("failure: ",failure)
+                    }
+                }
+            }
+            .padding()
+            Text(UserDefaults.standard.string(forKey: "Dobong") ?? "없음")
+            Text(UserDefaults.groupShared.string(forKey: "Dobong") ?? "없음")
             CountView()
         }
         .padding()
