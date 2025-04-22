@@ -43,7 +43,7 @@ struct ContentView: View {
             .padding()
             Text(UserDefaults.standard.string(forKey: "Dobong") ?? "없음")
             Text(UserDefaults.groupShared.string(forKey: "Dobong") ?? "없음")
-            CountView()
+            CountView(viewModel: CountViewModel())
         }
         .padding()
     }
@@ -63,7 +63,11 @@ struct ContentView: View {
 
 struct CountView: View {
     //body rendering > state
-    @StateObject var viewModel = CountViewModel()
+    
+    //@StateObject -> @Bindable
+    //@Bindable: 뷰 내부에서 객체를 소유하지 않는다.
+    //  - 그렇기에 DI에 맞게 주입 받자.
+    @Bindable var viewModel: CountViewModel
     
     /// 여기의 body는 @State가 아직 없어서 자기가 언제 렌더링 돼야하는지 모름
     /// vm을 @State 즉, SOT로 설정하여 렌더링의 기준이 되도록한다.
@@ -75,11 +79,20 @@ struct CountView: View {
     }
 }
 
+///ObservableObject Protocol, @Published Wrapper
+/// = @Observable이 대체가능 //iOS17+
+
 //ObservableObject: @Published로 관찰을 하기위해 필요
-class CountViewModel: ObservableObject {
+//  - 런타임 시점에 출동
+
+//@Observable: 모든 프로퍼티가 관찰 대상이나, 변경된 프로퍼티만 추적해서 불필요한 리렌더링을 감소
+//  - 컴파일타임에 출동
+
+@Observable
+class CountViewModel {
     /// State는 View의 SOT로 VM에서는 사용될 수 없다.
     /// age가 변경되면 -> @State var viewModel 에게 신호를 전달해주어야 한다.
-    @Published var age = 0
+    var age = 0
     
     func addAge() {
         age += 1

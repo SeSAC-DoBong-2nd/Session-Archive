@@ -23,6 +23,7 @@
 		9EAA50DE2DB5E9CE00FB6BE6 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA50DD2DB5E9CE00FB6BE6 /* FirstView.swift */; };
 		9EAA50E02DB5EE3900FB6BE6 /* MyRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA50DF2DB5EE3900FB6BE6 /* MyRootView.swift */; };
 		9EAA50E22DB5EFED00FB6BE6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA50E12DB5EFED00FB6BE6 /* ListView.swift */; };
+		9EBF60942DB72D9100982A61 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF60932DB72D9100982A61 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		9EAA50DD2DB5E9CE00FB6BE6 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		9EAA50DF2DB5EE3900FB6BE6 /* MyRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRootView.swift; sourceTree = "<group>"; };
 		9EAA50E12DB5EFED00FB6BE6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9EBF60932DB72D9100982A61 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -172,6 +174,7 @@
 				9EAA50DD2DB5E9CE00FB6BE6 /* FirstView.swift */,
 				9EAA50DF2DB5EE3900FB6BE6 /* MyRootView.swift */,
 				9EAA50E12DB5EFED00FB6BE6 /* ListView.swift */,
+				9EBF60932DB72D9100982A61 /* PhotoView.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9EAA50E22DB5EFED00FB6BE6 /* ListView.swift in Sources */,
 				9EAA50E02DB5EE3900FB6BE6 /* MyRootView.swift in Sources */,
 				9E03BDF02DB0948C0097AA7E /* SwiftUIMVVMApp.swift in Sources */,
+				9EBF60942DB72D9100982A61 /* PhotoView.swift in Sources */,
 				9E03BDF72DB0A6FC0097AA7E /* AnimationView.swift in Sources */,
 				9E03BDF52DB09F000097AA7E /* ViewModelType.swift in Sources */,
 				9EAA50DE2DB5E9CE00FB6BE6 /* FirstView.swift in Sources */,

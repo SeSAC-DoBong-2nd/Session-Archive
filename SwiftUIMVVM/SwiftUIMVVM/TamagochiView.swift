@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TamagochiView: View {
     
-    @StateObject var viewModel = TamagochiViewModel()
+    @Bindable var viewModel: TamagochiViewModel
 
     var body: some View {
         Text("밥알: \(viewModel.rice)개, 물방울 \(viewModel.water)개")
@@ -32,12 +32,13 @@ struct TamagochiView: View {
     }
 }
 
-class TamagochiViewModel: ObservableObject {
+@Observable
+class TamagochiViewModel {
     
-    @Published var riceField = ""
-    @Published var rice = 0
-    @Published var waterField = ""
-    @Published var water = 0
+    var riceField = ""
+    var rice = 0
+    var waterField = ""
+    var water = 0
     
     func addRice() {
         if let count = Int(riceField) {
@@ -60,5 +61,5 @@ class TamagochiViewModel: ObservableObject {
 }
 
 #Preview {
-    TamagochiView()
+    TamagochiView(viewModel: TamagochiViewModel())
 }
