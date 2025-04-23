@@ -56,7 +56,7 @@ struct ContentView: View {
     
     @Bindable //state > stateobject > bindable
     var store: StoreOf<ContentFeature>
-    // 이와 같은 코드를 typealias를 활용하여 위처럼 변경 == StoreOf<ContentFeature.State, ContentFeature.Action>
+    // 이와 같은 코드를 typealias를 활용하여 위처럼 변경 == Store<ContentFeature.State, ContentFeature.Action>
     
     var body: some View {
         VStack(alignment: .center) {
