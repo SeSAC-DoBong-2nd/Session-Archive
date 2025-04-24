@@ -38,6 +38,10 @@ struct AnimationView: View {
     ]
     
     @State private var isExpandable = false
+    @State private var showdetail = false
+    @State private var currentCard = CardModel(name: "", number: 0)
+    
+    @Namespace var animation
     
     var body: some View {
         VStack {
@@ -53,6 +57,15 @@ struct AnimationView: View {
                 withAnimation(.bouncy) {
                     isExpandable = false
                 }
+            }
+        }
+        .overlay {
+            if showdetail {
+                DetailAnimationView(
+                    showDetail: $showdetail,
+                    currentCard: currentCard,
+                    animation: animation
+                )
             }
         }
     }
@@ -88,7 +101,13 @@ struct AnimationView: View {
             .frame(maxWidth: .infinity)
             .padding(.horizontal)
             .offset(y: CGFloat(card.number) * (isExpandable ? 0 : -100))
-//            .offset(y: 100 * CGFloat(card.number) * (isExpandable ? 0.06 : -1))
+            .matchedGeometryEffect(id: card, in: animation)
+            .onTapGesture {
+                currentCard = card
+                withAnimation(.easeInOut) {
+                    showdetail = true
+                }
+            }
     }
     
     func topTitle() -> some View {
@@ -123,6 +142,32 @@ struct AnimationView: View {
         .opacity(isExpandable ? 1 : 0)
     }
     
+}
+
+struct DetailAnimationView: View {
+    
+    @Binding var showDetail: Bool
+    let currentCard: CardModel
+    let animation: Namespace.ID
+    
+    var body: some View {
+        ZStack {
+            Color.gray.ignoresSafeArea()
+            VStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(currentCard.color)
+                    .frame(height: 130)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal)
+                    .matchedGeometryEffect(id: currentCard, in: animation)
+                    .onTapGesture {
+                        withAnimation(.easeInOut) {
+                            showDetail = false
+                        }
+                    }
+            }
+        }
+    }
 }
 
 #Preview {

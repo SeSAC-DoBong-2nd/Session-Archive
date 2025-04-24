@@ -9,20 +9,37 @@ import SwiftUI
 
 import ComposableArchitecture
 
+struct MyTodo: Hashable, Identifiable {
+    let id = UUID()
+    var content: String
+    var isDone: Bool = false
+}
+
+///TCA 화면 전환 종류: transition
+// @Presents, PresentationAction, ifLet
+
 @Reducer
 struct TodoFeature {
     
     @ObservableState
     struct State {
         var todoText = ""
-        var todoList = ["123", "456", "789"]
+        //IdentifiedArrayOf: UUID 기반으로 조회
+        var todoList: IdentifiedArrayOf = [
+            MyTodo(content: "123"),
+            MyTodo(content: "456"),
+            MyTodo(content: "789")
+        ]
+        @Presents var showDetail: DetailTodoFeature.State?
     }
     
     enum Action: BindableAction {
         case add
-        case delete
-        case done
+        case delete(id: MyTodo.ID)
+        case done(id: MyTodo.ID) //체크박스 클릭
+        case select(id: MyTodo.ID) //셀 클릭
         case binding(BindingAction<State>)
+        case showDetail(PresentationAction<DetailTodoFeature.Action>)
     }
     
     var body: some ReducerOf<Self> {
@@ -32,21 +49,38 @@ struct TodoFeature {
         Reduce { state, action in
             switch action {
             case .add:
-                
                 guard !state.todoText.isEmpty else { return .none }
                 
-                state.todoList.append(state.todoText)
+                state.todoList.append(MyTodo(content: state.todoText))
                 state.todoText = ""
                 return .none
-            case .delete:
-                state.todoList.remove(at: 0)
+            case .delete(let id):
+                state.todoList.remove(id: id)
                 return .none
-            case .done: //할 일 완료에 대한 체크 기능 추가해야 함.
+            case .done(let id):
                 print("tap done")
+                guard let idx = state.todoList.index(id: id) else {
+                    return .none
+                }
+                state.todoList[idx].isDone.toggle()
+                return .none
+            case .select(let id):
+                //선택했을 때 다음 화면으로 넘어가도록
+                //다음 화면으로 넘어갈 때 MyTodo 값 전달도 되도록
+                if let list = state.todoList[id: id] {
+                    //다음 화면으로 넘어갈 때 MyTodo 값도 전달되도록
+                    state.showDetail =  DetailTodoFeature.State(myTodo: list)
+                }
                 return .none
             case .binding(_):
                 return .none
+            case .showDetail(_):
+                return .none
             }
+        }
+        //ifLet: 키가되는 인스턴스가 없다면 무시하다가, 생길 때 곧바로 실행된다.
+        .ifLet(\.$showDetail, action: \.showDetail) {
+            DetailTodoFeature()
         }
     }
     
@@ -68,19 +102,24 @@ struct TodoView: View {
                 }
                 .padding()
                 List {
-                    ForEach(store.todoList, id: \.self) { item in
+                    ForEach(store.todoList, id: \.id) { item in
                         HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                            Text(item)
-                                
+                            let imageName = item.isDone ? "checkmark.circle.fill" : "circle"
+                            Image(systemName: imageName)
+                                .onTapGesture {
+                                    store.send(.done(id: item.id))
+                                }
+                            Text(item.content)
+                            Spacer()
                         }
+                        .frame(maxWidth: .infinity)
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            store.send(.done)
+                            store.send(.select(id: item.id))
                         }
                         .swipeActions {
                             Button("삭제", role: .destructive) {
-                                store.send(.delete)
+                                store.send(.delete(id: item.id))
                             }
                             
                         }
@@ -88,6 +127,14 @@ struct TodoView: View {
                 }
             }
             .navigationTitle("나의 할 일")
+            .navigationDestination(
+                store: store.scope(
+                    state: \.$showDetail,
+                    action: \.showDetail
+                )
+            ) { store in
+                DetailTodoView(store: store)
+            }
         }
     }
 }
