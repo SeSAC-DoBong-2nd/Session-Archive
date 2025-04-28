@@ -13,11 +13,7 @@ import ComposableArchitecture
 struct SwiftUITCABasicApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(
-                store: Store(initialState: ContentFeature.State()) {
-                    ContentFeature()
-                }
-            )
+            TransitionView()
         }
     }
 }

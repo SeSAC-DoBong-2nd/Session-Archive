@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E1EFCF12DB9E3460021DE73 /* DetailTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCF02DB9E3460021DE73 /* DetailTodoView.swift */; };
+		9E1EFDC62DBF07EF0021DE73 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */; };
 		9EBF60B52DB7409500982A61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF60B22DB7409500982A61 /* ContentView.swift */; };
 		9EBF60B62DB7409500982A61 /* SwiftUITCABasicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF60B32DB7409500982A61 /* SwiftUITCABasicApp.swift */; };
 		9EBF60B72DB7409500982A61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBF60AF2DB7409500982A61 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		9E1EFCF02DB9E3460021DE73 /* DetailTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoView.swift; sourceTree = "<group>"; };
+		9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 		9EBF609E2DB7408D00982A61 /* SwiftUITCABasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITCABasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBF60AF2DB7409500982A61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EBF60B12DB7409500982A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				9EBF60CA2DB87BED00982A61 /* NameViewWithTextField.swift */,
 				9EBF60CC2DB887DD00982A61 /* TodoView.swift */,
 				9E1EFCF02DB9E3460021DE73 /* DetailTodoView.swift */,
+				9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */,
 				9EBF60B12DB7409500982A61 /* Assets.xcassets */,
 				9EBF60B02DB7409500982A61 /* Preview Content */,
 			);
@@ -166,6 +169,7 @@
 				9EBF60CB2DB87BEE00982A61 /* NameViewWithTextField.swift in Sources */,
 				9EBF60C92DB8760E00982A61 /* NameView.swift in Sources */,
 				9EBF60B52DB7409500982A61 /* ContentView.swift in Sources */,
+				9E1EFDC62DBF07EF0021DE73 /* TransitionView.swift in Sources */,
 				9EBF60B62DB7409500982A61 /* SwiftUITCABasicApp.swift in Sources */,
 				9E1EFCF12DB9E3460021DE73 /* DetailTodoView.swift in Sources */,
 			);
