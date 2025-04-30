@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0C61AD2DC0695600BD5878 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C61AC2DC0695600BD5878 /* SimpleView.swift */; };
+		9E0C61AF2DC06F8900BD5878 /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C61AE2DC06F8900BD5878 /* RandomImageView.swift */; };
+		9E0C61B12DC079B400BD5878 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C61B02DC079B400BD5878 /* PhotoListView.swift */; };
 		9E1EFCF12DB9E3460021DE73 /* DetailTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCF02DB9E3460021DE73 /* DetailTodoView.swift */; };
 		9E1EFDC62DBF07EF0021DE73 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */; };
 		9EBF60B52DB7409500982A61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF60B22DB7409500982A61 /* ContentView.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0C61AC2DC0695600BD5878 /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
+		9E0C61AE2DC06F8900BD5878 /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
+		9E0C61B02DC079B400BD5878 /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 		9E1EFCF02DB9E3460021DE73 /* DetailTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoView.swift; sourceTree = "<group>"; };
 		9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 		9EBF609E2DB7408D00982A61 /* SwiftUITCABasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITCABasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,9 @@
 				9E1EFDC52DBF07EF0021DE73 /* TransitionView.swift */,
 				9EBF60B12DB7409500982A61 /* Assets.xcassets */,
 				9EBF60B02DB7409500982A61 /* Preview Content */,
+				9E0C61AC2DC0695600BD5878 /* SimpleView.swift */,
+				9E0C61AE2DC06F8900BD5878 /* RandomImageView.swift */,
+				9E0C61B02DC079B400BD5878 /* PhotoListView.swift */,
 			);
 			path = SwiftUITCABasic;
 			sourceTree = "<group>";
@@ -165,8 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBF60CD2DB887DD00982A61 /* TodoView.swift in Sources */,
+				9E0C61AD2DC0695600BD5878 /* SimpleView.swift in Sources */,
 				9EBF60BD2DB76F5600982A61 /* TextCountView.swift in Sources */,
+				9E0C61AF2DC06F8900BD5878 /* RandomImageView.swift in Sources */,
 				9EBF60CB2DB87BEE00982A61 /* NameViewWithTextField.swift in Sources */,
+				9E0C61B12DC079B400BD5878 /* PhotoListView.swift in Sources */,
 				9EBF60C92DB8760E00982A61 /* NameView.swift in Sources */,
 				9EBF60B52DB7409500982A61 /* ContentView.swift in Sources */,
 				9E1EFDC62DBF07EF0021DE73 /* TransitionView.swift in Sources */,

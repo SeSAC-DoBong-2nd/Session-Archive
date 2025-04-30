@@ -13,7 +13,14 @@ import ComposableArchitecture
 struct SwiftUITCABasicApp: App {
     var body: some Scene {
         WindowGroup {
-            TransitionView()
+            RandomImageView(
+                store: Store(
+                    initialState: RandomImage.State(),
+                    reducer: {
+                        RandomImage()
+                    }
+                )
+            )
         }
     }
 }
