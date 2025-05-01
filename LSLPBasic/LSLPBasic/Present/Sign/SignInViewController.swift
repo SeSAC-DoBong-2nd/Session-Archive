@@ -53,11 +53,21 @@ final class SignInViewController: BaseViewController {
             encoder: .json(),
             headers: headers
         )
-        .responseString { value in
-            dump(value)
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: LoginModel.self) { response in
+            switch response.result {
+                
+            case .success(let value):
+                print(value)
+                UserDefaults.standard.set(value.accessToken, forKey: "accessToken")
+                UserDefaults.standard.set(value.refreshToken, forKey: "refreshToken")
+                
+                self.navigationController?.pushViewController(PostViewController(), animated: true)
+            case .failure(let error):
+                print("error: \(error)")
+                print(response.response?.statusCode ?? "unknown")
+            }
         }
-        
-        navigationController?.pushViewController(PostViewController(), animated: true)
     }
     
     override func bind() {

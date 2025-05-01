@@ -31,6 +31,9 @@
 		041A93362BC4C3F800FA1D7D /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A93352BC4C3F800FA1D7D /* PostViewModel.swift */; };
 		9E0C61B32DC1D16500BD5878 /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9E0C61B22DC1D16500BD5878 /* Secret.xcconfig */; };
 		9E0C61B52DC1D1E600BD5878 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C61B42DC1D1E600BD5878 /* Config.swift */; };
+		9E7B92D72DC2FBE80010B1D5 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B92D62DC2FBE80010B1D5 /* LoginModel.swift */; };
+		9E7B92D92DC301AC0010B1D5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B92D82DC301AC0010B1D5 /* ProfileModel.swift */; };
+		9E7B92DB2DC30CD30010B1D5 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B92DA2DC30CD30010B1D5 /* TokenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		041A93352BC4C3F800FA1D7D /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		9E0C61B22DC1D16500BD5878 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		9E0C61B42DC1D1E600BD5878 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9E7B92D62DC2FBE80010B1D5 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		9E7B92D82DC301AC0010B1D5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		9E7B92DA2DC30CD30010B1D5 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 			children = (
 				041A93092BC4C18D00FA1D7D /* SignInViewController.swift */,
 				041A93192BC4C1F700FA1D7D /* SignInViewModel.swift */,
+				9E7B92D62DC2FBE80010B1D5 /* LoginModel.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 			children = (
 				041A932C2BC4C39100FA1D7D /* View */,
 				041A932B2BC4C38E00FA1D7D /* ViewModel */,
+				9E7B92D82DC301AC0010B1D5 /* ProfileModel.swift */,
+				9E7B92DA2DC30CD30010B1D5 /* TokenModel.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7B92D72DC2FBE80010B1D5 /* LoginModel.swift in Sources */,
 				041A93302BC4C3B900FA1D7D /* PostView.swift in Sources */,
 				041A930A2BC4C18D00FA1D7D /* SignInViewController.swift in Sources */,
 				041A93202BC4C25800FA1D7D /* UIViewController+Ex.swift in Sources */,
@@ -325,6 +335,8 @@
 				9E0C61B52DC1D1E600BD5878 /* Config.swift in Sources */,
 				041A931A2BC4C1F700FA1D7D /* SignInViewModel.swift in Sources */,
 				041A931E2BC4C24100FA1D7D /* ReusableID.swift in Sources */,
+				9E7B92D92DC301AC0010B1D5 /* ProfileModel.swift in Sources */,
+				9E7B92DB2DC30CD30010B1D5 /* TokenModel.swift in Sources */,
 				041A93022BC4C14600FA1D7D /* PointButton.swift in Sources */,
 				041A92ED2BC4C10400FA1D7D /* SceneDelegate.swift in Sources */,
 				041A93272BC4C2AE00FA1D7D /* BaseCollectionViewCell.swift in Sources */,

@@ -33,7 +33,7 @@ extension Config {
     
     static let sesacKey: String = {
         guard let key = Config.infoDictionary[Keys.sesacKey] as? String else {
-            fatalError("BASE_URL is not set in plist for this configuration")
+            fatalError("SESAC_KEY is not set in plist for this configuration")
         }
         return key
     }()
